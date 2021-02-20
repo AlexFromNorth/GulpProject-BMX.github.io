@@ -1,0 +1,420 @@
+// тело, 2й блок, о продукте 
+
+.products{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+    }
+    &__text{
+        max-width: 440px;
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    &__slider-box{
+        position: relative;
+        padding-top: 110px;
+    }
+    &__slider-text{
+        width: 285px;
+        position: absolute;
+        text-align: right;
+        font-size: 24px;
+        line-height: 28px;
+        bottom: 30px;
+        left: -250px;
+        z-index: 5;
+    }
+    &__slider{
+        max-width: 560px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 560px; 
+            height: 276px;
+            border: 4px solid #fff;
+            top: -15px;
+            right: -17px;
+        }
+    }
+}
+// Слайдер
+.slider-btn{
+    padding: 16px 26px;
+    border: none;
+    background-color: black;
+    transition: 0.3s;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    z-index: 5;
+    bottom: -48px;
+    svg{
+        stroke: white;
+    }
+    &__left{
+        right: 60px;
+    }
+}
+.slider-btn:hover{
+    background-color: white;
+    svg{
+        stroke: black;
+    }
+}
+
+// преимущества, 3й блок
+
+.benefits{
+    &__items{
+        display: flex;
+        flex-wrap: wrap; 
+        padding-left: 25px;
+    }
+    &__item{
+        margin-bottom: 100px;
+        display: flex;
+        align-items: flex-end;
+        &:nth-child(even){
+        margin-left: 40px;      
+        transform: translateY(25px);  
+        }
+        &:nth-child(3){
+            margin-left: 30px;
+        }
+        &:nth-child(4){
+            margin-left: 60px;
+        }
+        // svg пунктиры между картинками
+        &:first-child, 
+        &:nth-child(3){
+            position: relative;
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+        }
+        &:first-child{
+            &::before{
+                height: 48px;
+                width: 245px;
+                background-image: url(../images/backgrounds/line-1.svg);
+                right: -56px;
+                top: 31px;  
+            }
+        }
+        &:nth-child(3){
+            &::before{
+                background-image: url(../images/backgrounds/line-3.svg);
+                width: 254px;
+                height: 43px;
+                right: -55px;
+                top: 50px;
+            }
+            &::after{
+                background-image: url(../images/backgrounds/line-2.svg);
+                width: 463px;
+                height: 62px;   
+                top: -70px;
+                right: -54px;   
+            }
+        }
+    }
+    &__num{
+        font-size: 36px;
+        line-height: 41px;
+        margin-right: 10px;
+    }
+    &__img{
+        position: relative;
+        margin-right: 32px;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 193px;
+            height: 128px;
+            border: 2px solid #fff;
+            right: -12px;
+            top: -12px;
+            z-index: -1;
+        }
+    }
+    &__info{
+        width: 300px;
+    }
+    &__info-title{
+        width: 123px;
+        font-size: 21px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    &__info-text{
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+// Характеристики, 4й блок
+
+.specification{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25px;
+    }
+    &__item-center{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &__box{
+        width: 280px;
+        position: relative;
+        margin-top: 10px;
+        &::before{
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+    }
+    &__box-2{
+        margin-top: 140px;
+    }
+    &__box-4{
+        margin-top: 160px;
+    }
+    &__box-1::before{
+        background-image: url(../images/backgrounds/pointer-1.svg);
+        width: 229px;
+        height: 114px;
+        right: -254px;
+        top: 57px;
+    }
+    &__box-2::before{
+        background-image: url(../images/backgrounds/pointer-2.svg);
+        width: 345px;
+        height: 81px;
+        right: -276px;
+        top: -55px;
+    }
+    &__box-3::before{
+        background-image: url(../images/backgrounds/pointer-3.svg);
+        width: 258px;
+        height: 103px;
+        left: -258px;
+        top: 16px;
+    }
+    &__box-4::before{
+        background-image: url(../images/backgrounds/pointer-4.svg);
+        width: 124px;
+        height: 89px;
+        left: -172px;
+        top: -73px;
+    }
+    &__box-title{
+        font-size: 21px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+    &__box-text{
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+// Остались вопросы, 5й блок
+
+.questions{
+    &__items{
+        min-width: 757px;
+        padding-bottom: 15px;        
+    }
+    &__item{
+        background-color: rgba(0, 0, 0, 0.3);
+        max-width: 690px;
+        position: relative;
+        &:nth-child(3)::before{
+            content: "";
+            position: absolute;
+            width: 319px;
+            height: 125px;
+            top: -46px;
+            right: -375px;
+            background-image: url(../images/backgrounds/questions-bg.png);
+        }
+    }
+    &__item-title{
+        line-height: 28px;
+        font-size: 21px;
+        color: rgba(#fff, .8);
+        padding: 20px 10px 20px 40px;
+        position: relative;
+        margin-bottom: 4px;
+        cursor: pointer;
+        &::after{
+            content: url('../images/buttons/accordion-arrow.svg');
+            position: absolute;
+            width: 72px;
+            height: 67px;
+            background-color: #fff;
+            right: -72px;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__item-text{
+        padding: 0 5px 75px 50px;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0 0 4px;
+        display: none;
+    }
+    &__item.questions__item-active{
+        .questions__item-title::after{
+            transform: rotate(180deg);
+        }
+        .questions__item-text{
+            display: block;
+        }
+    }
+}
+
+// контакты, 6й блок
+
+.contacts{
+    &__inner{
+        display: flex;
+        padding-left: 25px;
+    }
+    &__info{
+        width: 240px;
+        margin-right: 60px;
+    }
+    &__info-box{
+        margin-bottom: 30px;
+    }
+    &__info-title{
+        font-size: 21px;
+        line-height: 24px;
+        margin: 0 0 13px;
+    }
+    &__info-phone,
+    &__info-email{
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    &__info-email:hover{
+        text-decoration: underline;
+    }
+    &__form{
+        width: 570px;
+        margin-right: 106px;
+    }
+    &__form-title{
+        line-height: 24px;
+        font-size: 21px;
+        margin: 0 0 13px;
+    }
+    &__form-text{
+        font-size: 15px;
+        line-height: 18px;
+        margin: 0 0 12px;
+    }
+    &__form-line{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &__form-input{
+        width: 49%;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 15px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #fff;
+        &::placeholder{
+            color: rgba(#fff, .4);
+        }
+    }
+    &__form-textarea{
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 15px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #fff;
+        min-height: 144px;
+        width: 100%;
+        resize: none;
+        margin-bottom: 20px;
+        &::placeholder{
+            color: rgba(#fff, .4);
+        }
+    }
+    &__form-btn{
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 2px;
+        padding: 9px 15px;
+        color: #FFF;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+    &__social-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__social-item{
+        margin: 28px 0;
+    }
+    &__social-item2{
+        position: relative;
+    }
+    &__social-link{
+        opacity: 0.5;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__social-link2{
+        position: absolute;
+        content: "";
+        top: -23px;
+        right: -4px;
+    }
+}
+
+// "подвал", небольшая подпись в правом нижнем углу.
+
+.footer{
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 45px;
+    &__copy{
+        text-align: right;
+        font-size: 13px;
+        line-height: 15px;
+        color: rgba(#fff, .64);
+    }
+}
