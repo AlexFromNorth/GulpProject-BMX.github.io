@@ -20,13 +20,13 @@
 
 <br />
 <br />
-<img src="src/images/1.png" alt="demo auth">
+<img src="images/1.png" alt="demo img">
 <br />
 <br />
-<img src="src/images/2.png" alt="demo news" >
+<img src="images/2.png" alt="demo img" >
 <br />
 <br />
-<img src="src/images/3.png" alt="demo messages" >
+<img src="images/3.png" alt="demo img" >
 <br />
 <br />
-<img src="src/images/4.png" alt="demo friends">
+<img src="images/4.png" alt="demo img">
