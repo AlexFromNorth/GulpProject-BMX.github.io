@@ -12,7 +12,7 @@
 
 1. Склонировать репозиторий в текущую папку:
 
-```git clone https://github.com/AlexFromNorth/GulpProject-BMX.github.io.git ./```
+```git clone https://github.com/AlexFromNorth/GulpProject-BMX.github.io.git ```
 
 2. Запустить проект:
 
